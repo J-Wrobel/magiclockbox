@@ -1,0 +1,38 @@
+{
+  "SchemaVersion": 1,
+  "Name": "Avnet-Starter-Kit-reference-V1.0",
+  "ComponentId": "685f13af-25a5-40b2-8dd8-8cbc253ecbd8",
+  "EntryPoint": "/bin/app",
+  "CmdArgs": [ "Avnet-Starter-Kit-reference-V1.0" ],
+    "Capabilities": {
+        //// IoT Central application connection (Replace the xxxx placeholder with your IOTC application's ComponentID)
+        "AllowedConnections": [ "iotc-43a54565-45d1-41b2-b8a8-a70e14c2d319.azure-devices.net" ],
+        "AllowedTcpServerPorts": [],
+        "AllowedUdpServerPorts": [],  
+        "Gpio": [
+
+            "$AVNET_MT3620_SK_USER_LED_RED",
+            "$AVNET_MT3620_SK_USER_LED_GREEN",
+            "$AVNET_MT3620_SK_USER_LED_BLUE",
+            "$AVNET_MT3620_SK_APP_STATUS_LED_YELLOW",
+            "$AVNET_MT3620_SK_WLAN_STATUS_LED_YELLOW",
+            "$AVNET_MT3620_SK_USER_BUTTON_A",
+            "$AVNET_MT3620_SK_USER_BUTTON_B",
+            "$AVNET_MT3620_SK_GPIO34",
+
+            "$AVNET_MT3620_SK_GPIO6",
+            "$AVNET_MT3620_SK_GPIO26",
+            "$AVNET_MT3620_SK_GPIO28"
+        ],
+        "Uart": [],
+        "I2cMaster": [ "$AVNET_MT3620_SK_ISU2_I2C" ],
+        "SpiMaster": [],
+        "WifiConfig": true,
+        "NetworkConfig": false,
+        "SystemTime": false,
+        "MutableStorage": { "SizeKB": 8 },
+        //Pins for this controller are shared with AVNET_MT3620_SK_GPIO0, AVNET_MT3620_SK_GPIO1 and AVNET_MT3620_SK_GPIO2. If this PWM controller is requested, none of these GPIOs can be used.
+        "Pwm": [ "$AVNET_MT3620_SK_PWM_CONTROLLER0" ]
+    },
+  "ApplicationType": "Default"
+}
